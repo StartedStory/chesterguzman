@@ -109,12 +109,13 @@ function AboutPage() {
 
           <div className="rounded-xl border border-primary/30 bg-primary/5 p-6">
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-              Currently
+              Last Position
             </p>
             <p className="mt-3 font-display text-base font-semibold text-foreground">
               Senior Full Stack Engineer
             </p>
             <p className="mt-1 text-sm text-muted-foreground">FunctionHealth · Austin, TX</p>
+            <p className="mt-1 font-mono text-xs text-muted-foreground">Jan 2025 — Feb 2026</p>
           </div>
         </aside>
       </div>

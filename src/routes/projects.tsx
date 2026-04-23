@@ -1,6 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ArrowUpRight, Lock } from "lucide-react";
+import functionhealthImg from "@/assets/functionhealth.png";
+import migraineheroesImg from "@/assets/migraine_heroes.png";
+import expertcloseImg from "@/assets/exp-close.png";
+import moneylineappImg from "@/assets/moneylineapp.png";
+import cactuswareImg from "@/assets/cactusware.png";
+import hitposthubImg from "@/assets/hitposthub.png";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -24,24 +30,56 @@ export const Route = createFileRoute("/projects")({
 const projects = [
   {
     title: "Healthcare Analytics Platform",
-    tag: "Case Study · Coming Soon",
-    desc: "Real-time data visualization for clinical insights, built with React, D3.js, GraphQL, and React Native companion app.",
-    stack: ["React", "TypeScript", "D3.js", "GraphQL", "React Native"],
+    tag: "FunctionHealth · How it works",
+    desc: "Real-time data visualization for clinical insights, built with React, Recharts, GraphQL, and React Native companion app.",
+    stack: ["React", "TypeScript", "Recharts", "GraphQL", "React Native"],
     color: "from-cyan-500/20 to-blue-500/10",
+    image: functionhealthImg,
+    url: "https://www.functionhealth.com/how-it-works",
   },
   {
-    title: "Creative Studio Toolkit",
-    tag: "Case Study · Coming Soon",
-    desc: "Dynamic visualization and transformation tools powering a multi-tenant creative platform with Vue 3 + Pinia.",
-    stack: ["Vue 3", "Vuetify", "Pinia", "Node.js", "Python"],
+    title: "Lasting Relief from Chronic Migraine",
+    tag: "Migraine Heroes · How it works",
+    desc: "Interactive health platform interfaces with rich media, dynamic forms, and progress tracking.",
+    stack: ["Next", "Redux", "Tailwind CSS", "Node.js", "Typescript"],
     color: "from-teal-500/20 to-emerald-500/10",
+    image: migraineheroesImg,
+    url: "https://migraineheroes.com/how-it-works/",
   },
   {
-    title: "Cross-Platform Mobile Suite",
-    tag: "Case Study · Coming Soon",
+    title: "Cloud-Based Real Estate Broker",
+    tag: "eXp South Africa Deals · Coming Soon",
+    desc: "Centralized dashboard for managing transactions, tasks, and users, improving efficiency in real estate operations.",
+    stack: ["React", "Python", "Supabase", "AI-augmented tools (Lovable, v0.dev)", "Rapid Prototyping"],
+    color: "from-teal-500/20 to-emerald-500/10",
+    image: expertcloseImg,
+    url: "https://exp-south-africa-deals.lovable.app/dashboard",
+  },
+  {
+    title: "Moneyline Mobile App: React Native",
+    tag: "moneyline · Coming Soon",
     desc: "Production React Native applications shipped to iOS and Android with shared component libraries and offline support.",
-    stack: ["React Native", "Zustand", "TypeScript", "Node.js"],
+    stack: ["React Native", "Zustand", "TypeScript", "Node.js", "iOS", "Android"],
     color: "from-sky-500/20 to-cyan-500/10",
+    image: moneylineappImg,
+  },
+  {
+    title: "Sports Scheduling Software: Ruby on Rails & React",
+    tag: "Diamond Scheduler Sports Scheduling Software",
+    desc: "Diamond Scheduler is a leading sports scheduling software that simplifies the planning of sports leagues.",
+    stack: ["React", "React-Rails", "Ruby", "Ruby on Rails API", "SaaS"],
+    color: "from-teal-500/20 to-emerald-500/10",
+    image: cactuswareImg,
+    url: "https://cactusware.com",
+  },
+  {
+    title: "Top Digital Marketing Agency",
+    tag: "Hitpost Strategy Hub · How it works",
+    desc: "Hitpost offers expert digital marketing strategies tailored to your business needs, driving growth with proven results and hands-on execution.",
+    stack: ["React", "Typescript", "Rapid Prototyping", "AI Integration", "SaaS"],
+    color: "from-cyan-500/20 to-blue-500/10",
+    image: hitposthubImg,
+    url: "https://hitpost-strategy-hub.lovable.app/",
   },
 ];
 
@@ -67,6 +105,7 @@ function ProjectsPage() {
             <div
               className={`relative aspect-[4/3] overflow-hidden bg-gradient-to-br ${p.color}`}
             >
+              {p.image ? <div className="w-full h-full" style={{ backgroundImage: `url(${p.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}></div> : <></>}
               <div className="absolute inset-0 bg-grid opacity-30" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="font-display text-7xl font-bold text-foreground/10">
@@ -79,9 +118,11 @@ function ProjectsPage() {
             </div>
 
             <div className="p-6">
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
-                {p.tag}
-              </p>
+              <a href={p.url ?? ""} target="_blank">
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">
+                  {p.tag}
+                </p>
+              </a>
               <h3 className="mt-3 font-display text-xl font-semibold text-foreground">
                 {p.title}
               </h3>

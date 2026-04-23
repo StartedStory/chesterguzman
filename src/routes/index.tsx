@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Github, Linkedin, MapPin, Sparkles } from "lucide-react";
-import avatar from "@/assets/avatar.jpg";
+import avatar from "@/assets/in-singapore.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -77,7 +77,7 @@ function HomePage() {
             </h1>
 
             <p className="mt-5 max-w-xl font-mono text-sm text-muted-foreground sm:text-base">
-              <span className="text-primary">{"// "}</span>
+              {/* <span className="text-primary">{"// "}</span> */}
               Senior Full Stack Engineer · React · Node · Python · React Native
             </p>
 
@@ -121,7 +121,8 @@ function HomePage() {
                 <Linkedin size={16} />
               </a>
               <a
-                href="#"
+                href="https://github.com/StartedStory"
+                target="_blank"
                 className="grid h-11 w-11 place-items-center rounded-md border border-border-strong bg-surface/50 text-muted-foreground transition-smooth hover:border-primary/60 hover:text-primary"
                 aria-label="GitHub"
               >
@@ -157,10 +158,10 @@ function HomePage() {
                 <div className="flex items-end justify-between">
                   <div>
                     <p className="font-mono text-[10px] uppercase tracking-wider text-primary">
-                      Currently
+                      OPEN_TO_WORK
                     </p>
                     <p className="mt-1 font-display text-sm font-semibold text-foreground">
-                      Senior Full Stack @ FunctionHealth
+                      Senior Full Stack @ Work From Home
                     </p>
                   </div>
                   <div className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">

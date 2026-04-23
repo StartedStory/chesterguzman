@@ -27,7 +27,7 @@ const jobs = [
     role: "Senior Full Stack Developer",
     location: "Austin, TX",
     period: "Jan 2025 — Feb 2026",
-    current: true,
+    current: false,
     bullets: [
       "Built scalable, high-performance applications using React and TypeScript for healthcare analytics platforms.",
       "Developed advanced data visualization systems using D3.js and Recharts for real-time insights.",
